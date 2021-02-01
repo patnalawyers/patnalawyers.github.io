@@ -26,7 +26,6 @@
     <title>Patna Lawyers</title>
   </head>
   <body>
-    <div id="google_translate_element"></div>
     <div class="lines-wrap">
       <div class="lines-inner">
         <div class="lines"></div>
@@ -781,6 +780,7 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/custom.js"></script>
+    <!-- <div id="google_translate_element"></div>
     <script
       type="text/javascript"
       src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
@@ -788,10 +788,15 @@
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement(
-          { pageLanguage: "en" },
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,hi",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+
           "google_translate_element"
         );
       }
-    </script>
+    </script> -->
   </body>
 </html>
