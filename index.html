@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Patna Lawyers</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
   </head>
   <body>
     <div class="lines-wrap">
@@ -105,15 +106,15 @@
             </h2>
             <div class="px-md-5" data-aos="fade-right" data-aos-delay="100">
               <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in.
+                We deal in all sorts of cases such as civil cases and legal
+                matters such as criminal cases, bail petitions, writ, appeals,
+                PIL, revisions, revenue matters, ITR, IPR, consumer protection,
+                real estate, RERA cases etc.
               </p>
               <p class="mb-4">
-                Separated they live in Bookmarksgrove right at the coast of the
-                Semantics, a large language ocean.
+                It is our privilege to invite you to receive our legal services
+                from Patna Lawyers, with cherished 30 years of legacy.
               </p>
-              <p><a href="#" class="btn btn-primary">Learn More</a></p>
             </div>
           </div>
           <div class="col-lg-5 ml-auto js-hover-focus-one">
@@ -144,7 +145,7 @@
                 <span class="flaticon-group"></span>
               </span>
               <div class="text">
-                Commercial Law
+                Civil Law
                 <span class="d-block"
                   >Far far away, behind the word mountains, far from the
                   countries</span
@@ -199,7 +200,7 @@
         <div class="row align-items-center">
           <div class="col-lg-4" data-aos="fade-up">
             <h2 class="heading text-white">
-              <strong class="text-primary">50 Years</strong> of Experience in
+              <strong class="text-primary">30 Years</strong> of Experience in
               Various Cases
             </h2>
           </div>
@@ -210,42 +211,7 @@
           >
             <span class="display-2"
               ><span class="text-primary counter"
-                ><span data-number="90">0</span></span
-              ><span class="text-white">+</span></span
-            >
-            <strong class="d-block text-white">Awards</strong>
-            <p>
-              Separated they live in Bookmarksgrove right at the coast of the
-              Semantics.
-            </p>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 ml-auto"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <span class="display-2"
-              ><span class="text-primary counter"
-                ><span data-number="3">0</span>K</span
-              ><span class="text-white">+</span></span
-            >
-            <strong class="d-block text-white">Cases Wins</strong>
-            <p>
-              Separated they live in Bookmarksgrove right at the coast of the
-              Semantics.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4"></div>
-          <div
-            class="col-md-6 col-lg-3 ml-auto"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <span class="display-2"
-              ><span class="text-primary counter"
-                ><span data-number="2">0</span>K</span
+                ><span data-number="10">0</span>K</span
               ><span class="text-white">+</span></span
             >
             <strong class="d-block text-white">Clients</strong>
@@ -254,6 +220,7 @@
               Semantics.
             </p>
           </div>
+
           <div
             class="col-md-6 col-lg-3 ml-auto"
             data-aos="fade-up"
@@ -261,10 +228,10 @@
           >
             <span class="display-2"
               ><span class="text-primary counter"
-                ><span data-number="200"></span></span
+                ><span data-number="5">0</span>K</span
               ><span class="text-white">+</span></span
             >
-            <strong class="d-block text-white">Attorneys</strong>
+            <strong class="d-block text-white">Cases Wins</strong>
             <p>
               Separated they live in Bookmarksgrove right at the coast of the
               Semantics.
@@ -278,13 +245,14 @@
         <h2 class="heading text-white mb-5">
           <strong class="text-primary">Happy</strong> Clients
         </h2>
-        <div class="slider owl-carousel owl-3-slider">
-          <div class="untree_co-testimonial">
-            <blockquote>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in. Separated they live in Bookmarksgrove right at the
-              coast of the Semantics, a large language ocean.
+        <div class="slider owl-carousel owl-3-slider testimonial-container">
+          <div
+            v-for="(item, index) in testimonials"
+            :key="index"
+            class="untree_co-testimonial"
+          >
+            <blockquote style="min-height: 140px">
+              {{ item.feedback }}
               <div class="bubble">
                 <svg
                   width="49px"
@@ -312,216 +280,16 @@
             </blockquote>
             <div class="author d-flex align-items-center">
               <div class="pic">
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid" />
+                <img
+                  src="data:image/png;base64,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"
+                  alt="Image"
+                  class="img-fluid"
+                  style="background-color: #fff; padding: 8px"
+                />
               </div>
               <div class="text">
-                <strong class="d-block">Carl Anderson</strong>
-                <span class="position">CEO, Co-Founder</span>
-              </div>
-            </div>
-          </div>
-          <div class="untree_co-testimonial">
-            <blockquote>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in. Separated they live in Bookmarksgrove right at the
-              coast of the Semantics, a large language ocean.
-              <div class="bubble">
-                <svg
-                  width="49px"
-                  height="36px"
-                  viewBox="0 0 49 36"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <g
-                    id="Page-1"
-                    stroke="none"
-                    stroke-width="1"
-                    fill="none"
-                    fill-rule="evenodd"
-                  >
-                    <polygon
-                      id="Path"
-                      fill="#FFFFFF"
-                      points="0.05859375 0.72265625 0.05859375 35.230429 48.65625 0.72265625"
-                    ></polygon>
-                  </g>
-                </svg>
-              </div>
-            </blockquote>
-            <div class="author d-flex align-items-center">
-              <div class="pic">
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid" />
-              </div>
-              <div class="text">
-                <strong class="d-block">Carl Anderson</strong>
-                <span class="position">CEO, Co-Founder</span>
-              </div>
-            </div>
-          </div>
-          <div class="untree_co-testimonial">
-            <blockquote>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in. Separated they live in Bookmarksgrove right at the
-              coast of the Semantics, a large language ocean.
-              <div class="bubble">
-                <svg
-                  width="49px"
-                  height="36px"
-                  viewBox="0 0 49 36"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <g
-                    id="Page-1"
-                    stroke="none"
-                    stroke-width="1"
-                    fill="none"
-                    fill-rule="evenodd"
-                  >
-                    <polygon
-                      id="Path"
-                      fill="#FFFFFF"
-                      points="0.05859375 0.72265625 0.05859375 35.230429 48.65625 0.72265625"
-                    ></polygon>
-                  </g>
-                </svg>
-              </div>
-            </blockquote>
-            <div class="author d-flex align-items-center">
-              <div class="pic">
-                <img src="images/person_3.jpg" alt="Image" class="img-fluid" />
-              </div>
-              <div class="text">
-                <strong class="d-block">Carl Anderson</strong>
-                <span class="position">CEO, Co-Founder</span>
-              </div>
-            </div>
-          </div>
-          <div class="untree_co-testimonial">
-            <blockquote>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in. Separated they live in Bookmarksgrove right at the
-              coast of the Semantics, a large language ocean.
-              <div class="bubble">
-                <svg
-                  width="49px"
-                  height="36px"
-                  viewBox="0 0 49 36"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <g
-                    id="Page-1"
-                    stroke="none"
-                    stroke-width="1"
-                    fill="none"
-                    fill-rule="evenodd"
-                  >
-                    <polygon
-                      id="Path"
-                      fill="#FFFFFF"
-                      points="0.05859375 0.72265625 0.05859375 35.230429 48.65625 0.72265625"
-                    ></polygon>
-                  </g>
-                </svg>
-              </div>
-            </blockquote>
-            <div class="author d-flex align-items-center">
-              <div class="pic">
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid" />
-              </div>
-              <div class="text">
-                <strong class="d-block">Carl Anderson</strong>
-                <span class="position">CEO, Co-Founder</span>
-              </div>
-            </div>
-          </div>
-          <div class="untree_co-testimonial">
-            <blockquote>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in. Separated they live in Bookmarksgrove right at the
-              coast of the Semantics, a large language ocean.
-              <div class="bubble">
-                <svg
-                  width="49px"
-                  height="36px"
-                  viewBox="0 0 49 36"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <g
-                    id="Page-1"
-                    stroke="none"
-                    stroke-width="1"
-                    fill="none"
-                    fill-rule="evenodd"
-                  >
-                    <polygon
-                      id="Path"
-                      fill="#FFFFFF"
-                      points="0.05859375 0.72265625 0.05859375 35.230429 48.65625 0.72265625"
-                    ></polygon>
-                  </g>
-                </svg>
-              </div>
-            </blockquote>
-            <div class="author d-flex align-items-center">
-              <div class="pic">
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid" />
-              </div>
-              <div class="text">
-                <strong class="d-block">Carl Anderson</strong>
-                <span class="position">CEO, Co-Founder</span>
-              </div>
-            </div>
-          </div>
-          <div class="untree_co-testimonial">
-            <blockquote>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in. Separated they live in Bookmarksgrove right at the
-              coast of the Semantics, a large language ocean.
-              <div class="bubble">
-                <svg
-                  width="49px"
-                  height="36px"
-                  viewBox="0 0 49 36"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <g
-                    id="Page-1"
-                    stroke="none"
-                    stroke-width="1"
-                    fill="none"
-                    fill-rule="evenodd"
-                  >
-                    <polygon
-                      id="Path"
-                      fill="#FFFFFF"
-                      points="0.05859375 0.72265625 0.05859375 35.230429 48.65625 0.72265625"
-                    ></polygon>
-                  </g>
-                </svg>
-              </div>
-            </blockquote>
-            <div class="author d-flex align-items-center">
-              <div class="pic">
-                <img src="images/person_3.jpg" alt="Image" class="img-fluid" />
-              </div>
-              <div class="text">
-                <strong class="d-block">Carl Anderson</strong>
-                <span class="position">CEO, Co-Founder</span>
+                <strong class="d-block">{{ item.name }}</strong>
+                <span class="position">{{ item.designation }} </span>
               </div>
             </div>
           </div>
@@ -560,11 +328,6 @@
                 Separated they live in. Separated they live in Bookmarksgrove
                 right at the coast of the Semantics, a large language ocean.
               </p>
-              <p class="mb-0">
-                <a href="#" class="more dark"
-                  >Learn More <span class="icon-arrow_forward"></span
-                ></a>
-              </p>
             </div>
           </div>
           <div
@@ -586,11 +349,6 @@
                 Separated they live in. Separated they live in Bookmarksgrove
                 right at the coast of the Semantics, a large language ocean.
               </p>
-              <p class="mb-0">
-                <a href="#" class="more dark"
-                  >Learn More <span class="icon-arrow_forward"></span
-                ></a>
-              </p>
             </div>
           </div>
           <div
@@ -610,11 +368,6 @@
               <p>
                 Separated they live in. Separated they live in Bookmarksgrove
                 right at the coast of the Semantics, a large language ocean.
-              </p>
-              <p class="mb-0">
-                <a href="#" class="more dark"
-                  >Learn More <span class="icon-arrow_forward"></span
-                ></a>
               </p>
             </div>
           </div>
@@ -636,11 +389,6 @@
               <p>
                 Separated they live in. Separated they live in Bookmarksgrove
                 right at the coast of the Semantics, a large language ocean.
-              </p>
-              <p class="mb-0">
-                <a href="#" class="more dark"
-                  >Learn More <span class="icon-arrow_forward"></span
-                ></a>
               </p>
             </div>
           </div>
@@ -781,5 +529,67 @@
         );
       }
     </script> -->
+    <script>
+      // when life is settled, load up the fun stuff
+      document.addEventListener("DOMContentLoaded", function () {
+        new Vue({
+          el: ".testimonial-container",
+          // define data - initial display text
+          data: {
+            testimonials: [
+              {
+                name: "S. B. Sinha",
+                designation: "MD of Tirupati Homes Pvt. Ltd.",
+                feedback:
+                  "He is a good civil lawyer and very polite person and very professional in his work.",
+              },
+              {
+                name: "L. P. Singh",
+                designation: "Property Owner",
+                feedback: "Service of your associates were very satisfactory.",
+              },
+              {
+                name: "Salendra Jaiswal",
+                designation: "Businessman",
+                feedback:
+                  "I cant believed I won but you made impossible to possible.",
+              },
+              {
+                name: "Umesh Kumar",
+                designation: "IG CRPF",
+                feedback: "Thank you.",
+              },
+              {
+                name: "Chandrika Prasad",
+                designation: "Retired DIG, Bihar police",
+                feedback: "Best service.",
+              },
+              {
+                name: "B.C. Gupta ",
+                designation: "Land owner",
+                feedback:
+                  "I am very thankful and satisfied with the legal counsel that I have received at Patna Lawyers",
+              },
+              {
+                name: "R. K. Jha",
+                designation: "Retied DSP, Bihar police",
+                feedback:
+                  "Good staff and good lawyers. I was able to get quick resolution for my legal matters.",
+              },
+              {
+                name: "Prabhat Ranjan",
+                designation: "Real estate",
+                feedback: "Knowledgeable and quick legal service.",
+              },
+              {
+                name: "A.K. Singh",
+                designation: "Real estate",
+                feedback: "Thank you Patna lawyers for quick response.",
+              },
+            ].sort(() => Math.random() - 0.5),
+          },
+        });
+      });
+    </script>
   </body>
 </html>
