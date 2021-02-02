@@ -369,8 +369,14 @@
             <div class="widget">
               <h3>Contact</h3>
               <address>
-                Bhootnath road, Shakuntala Market, Opposite ICICI Bank, Patna -
-                800026
+                <script>
+                  document.write(
+                    [
+                      `Bhootnath road, Shakuntala Market, Opposite ICICI Bank, Patna - 800026`,
+                      `Chamber no. 144, Bihar Bar Council Bhavan, Patna - 800001`,
+                    ].sort(() => Math.random() - 0.5)[0]
+                  );
+                </script>
               </address>
               <ul class="list-unstyled links mb-4">
                 <li>
